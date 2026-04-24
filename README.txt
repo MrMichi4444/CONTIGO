@@ -1,0 +1,1 @@
+Proyecto CONTIGO para el certamen de proyectos, de la Cumbre Nacional de Desarrollo Tecnológico, Emprendimiento e Innovación, InnovaTecNM 2026
