@@ -1,6 +1,7 @@
 package com.tec2.Contigo.view;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,8 +27,12 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        TextView textViewFecha = findViewById(R.id.txtFecha);
+        Date fechaActual = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String fechaFormateada = sdf.format(fechaActual);
+        textViewFecha.setText(fechaFormateada);
     }
 
-    TextView textViewFecha = findViewById(R.id.textViewFecha);
 
 }
