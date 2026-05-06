@@ -8,40 +8,41 @@
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <!-- Saludo o nombre -->
+    <!-- Título -->
     <TextView
-        android:id="@+id/TV_Saludo"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¡Hola!"
+        android:text="MICRO-ACCIONES DIARIAS"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:paddingTop="16dp" />
+        android:paddingTop="16dp"/>
 
-    <!-- Fecha (puede ser estática o dinámica) -->
+    <!-- Acción principal (será aleatoria) -->
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/tvMainAction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Miercoles, 5 de Mayo"
+        android:text="Acción principal aquí"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Acciones extra (aleatorias también) -->
+    <TextView
+        android:id="@+id/tvExtra1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acción extra 1"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvExtra2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Acción extra 2"
         android:textSize="16sp"
         android:layout_marginTop="8dp"/>
-
-    <!-- Recordatorio de texto -->
-    <TextView
-        android:id="@+id/tvReminder"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Recuerda: no tienes que estar bien todos los días."
-        android:textSize="18sp"
-        android:layout_marginTop="32dp" />
-
-    <!-- Botón para avanzar -->
-    <Button
-        android:id="@+id/btnAvanzar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Quiero avanzar"
-        android:layout_marginTop="32dp" />
 
 </LinearLayout>

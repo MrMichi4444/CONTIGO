@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">My Application</string>
+
+    <string-array name="acciones_principales">
+        <item>Sal a tomar aire fresco por 10 minutos</item>
+        <item>Toma un vaso de agua lentamente</item>
+        <item>Escribe 3 cosas por las que estés agradecido</item>
+        <item>Respira profundo durante 1 minuto</item>
+        <item>Da una caminata corta</item>
+        <item>Escucha una canción que te calme</item>
+        <item>Ordena un espacio pequeño de tu habitación</item>
+        <item>Estírate por 5 minutos</item>
+        <item>Envía un mensaje amable a alguien</item>
+        <item>Haz una pausa sin mirar el celular por 10 minutos</item>
+    </string-array>
+
+    <string-array name="acciones_extras">
+        <item>Beber un vaso de agua</item>
+        <item>Duerme 7 horas</item>
+    </string-array>
+
 </resources>
