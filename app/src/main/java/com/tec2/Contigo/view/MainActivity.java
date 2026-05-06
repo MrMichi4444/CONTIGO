@@ -8,6 +8,10 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 import com.tec2.Contigo.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,4 +27,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    TextView textViewFecha = findViewById(R.id.textViewFecha);
+
 }
