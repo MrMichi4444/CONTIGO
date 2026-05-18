@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
         android:id="@+id/navigation_inicio"
         android:icon="@drawable/casa"
-        android:iconTint="@color/fondo"
         android:title="Inicio" />
 
     <item
         android:id="@+id/navigation_diario"
-        android:icon="@drawable/comunidad"
+        android:icon="@drawable/diario"
         android:title="Diario" />
 
     <item
         android:id="@+id/navigation_explorar"
-        android:icon="@drawable/diario"
+        android:icon="@drawable/lupa"
         android:title="Explorar" />
 
     <item
         android:id="@+id/navigation_comunidad"
-        android:icon="@drawable/lupa"
+        android:icon="@drawable/comunidad"
         android:title="Comunidad" />
 
     <item
         android:id="@+id/navigation_vo"
         android:icon="@drawable/yo"
-        android:title="Yo" />
+        android:title="Vo" />
+
 </menu>

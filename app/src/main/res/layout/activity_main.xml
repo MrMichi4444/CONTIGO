@@ -127,36 +127,15 @@
                 />
         </LinearLayout>
 
-        <LinearLayout
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom"
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:background="@color/fondo">
+            android:layout_height="124dp"
+            android:layout_gravity="bottom"
+            android:background="@color/fondo"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_nav_menu">
 
-
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/fondo"
-
-            <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/casa"
-                android:tint="@color/black"
-                />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Inicio"
-                android:textSize="12dp"
-                android:layout_marginTop="4dp"/>
-
-                />
-        </LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
     </LinearLayout>
 
 
