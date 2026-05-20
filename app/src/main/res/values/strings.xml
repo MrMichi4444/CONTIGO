@@ -18,5 +18,13 @@
         <item>Beber un vaso de agua</item>
         <item>Duerme 7 horas</item>
     </string-array>
+    
+    <string name="TV_Saludo">¿Cómo estas hoy?</string>
+    <string name="TV_Recordatorio">Recuerda: </string>
+    <string name="TV_Motivacion">No tienes que estar bien todos los días.</string>
+    <string name="B_Ayuda">Necesito ayuda ahora</string>
+    <string name="B_Avanzar">Hoy quiero avanzar</string>
+    <string name="B_Sentir">Quiero sentir / procesar</string>
+    <string name="B_Compania">Solo acompañame</string>
 
 </resources>

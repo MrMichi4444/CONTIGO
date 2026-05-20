@@ -1,48 +1,222 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:fillViewport="true"
+    android:background="@color/fondo">
 
-    <!-- Título -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MICRO-ACCIONES DIARIAS"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:paddingTop="16dp"/>
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints">
 
-    <!-- Acción principal (será aleatoria) -->
-    <TextView
-        android:id="@+id/tvMainAction"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acción principal aquí"
-        android:textSize="18sp"
-        android:textStyle="italic"
-        android:layout_marginTop="24dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="24dp">
 
-    <!-- Acciones extra (aleatorias también) -->
-    <TextView
-        android:id="@+id/tvExtra1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acción extra 1"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp"/>
+            <ImageButton
+                android:id="@+id/B_Regresar"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#00FFFFFF"
+                android:foreground="@drawable/punto_izq"
+                android:src="@drawable/punto_izq" />
 
-    <TextView
-        android:id="@+id/tvExtra2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Acción extra 2"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"/>
+            <TextView
+                style="@style/texto_regular"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hoy quiero avanzar"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:gravity="center" />
 
-</LinearLayout>
+            <View android:layout_width="48dp" android:layout_height="48dp" />
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/fondo2">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgTarjeta"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/sunrise"
+                        android:contentDescription="Imagen de la tarjeta" />
+
+                    <TextView
+                        android:id="@+id/txtTextoSobrepuesto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:text="Tu acción de hoy"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:padding="16dp"
+                        android:gravity="center_horizontal"
+                        android:fontFamily="@font/poppins"/>
+
+                </FrameLayout>
+
+                <!-- Primer cuadro de texto -->
+                <TextView
+                    android:id="@+id/TV_Principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:text="PlaceHolder"
+                    android:textSize="18sp" />
+
+
+                <TextView
+                    android:id="@+id/txtMensajeMotivacional"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_light"
+                    android:gravity="center"
+                    android:paddingHorizontal="16dp"
+                    android:paddingBottom="8dp"
+                    android:text="Pequeños pasos, grandes cambios."
+                    android:textSize="14sp" />
+
+                <!-- Botón -->
+                <Button
+                    style="@style/SoftButton"
+                    android:id="@+id/btnLoHare"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="¡Lo haré!"
+                    android:layout_margin="16dp"
+                    android:backgroundTint="@color/boton2"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- ============================================ -->
+        <!-- 3. CUADRO DE TEXTO DESPUÉS DE LA TARJETA -->
+        <!-- ============================================ -->
+        <TextView
+            android:id="@+id/txtMasAcciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="Más acciones para ti"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <!-- ============================================ -->
+        <!-- 4. DOS TARJETAS ALARGADAS CON BOTÓN A LA DERECHA -->
+        <!-- ============================================ -->
+
+        <!-- Tarjeta 1 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAccion1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="3dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:background="@color/fondo">
+
+                <!-- Texto de la acción -->
+                <TextView
+                    android:id="@+id/TV_Extra_1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="PlaceHolderEx"
+                    android:textSize="16sp" />
+
+                <!-- Botón a la derecha -->
+                <Button
+                    android:id="@+id/btnAccion1"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/baseline_add_circle_outline_24"
+                    android:text="+" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Tarjeta 2 -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardAccion2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="5dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:background="@color/fondo">
+
+                <!-- Texto de la acción -->
+                <TextView
+                    android:id="@+id/TV_Extra_2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/poppins"
+                    android:text="PlaceHolderEx"
+                    android:textSize="16sp" />
+
+                <!-- Botón a la derecha -->
+                <Button
+                    android:id="@+id/btnAccion2"
+                    style="@style/Widget.Material3.Button.TextButton"
+                    android:layout_width="49dp"
+                    android:layout_height="wrap_content"
+                    android:foreground="@drawable/baseline_add_circle_outline_24"
+                    android:text="+" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +15,15 @@ import androidx.core.view.WindowInsetsCompat;
 import com.tec2.Contigo.R;
 import com.tec2.Contigo.quiero_Avanzar;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class MainActivity extends AppCompatActivity {
 
     Button Avanzar;
+    TextView TV_Fecha;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +36,13 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Avanzar = findViewById(R.id.btnAvanzar);
+        TextView TV_Fecha = findViewById(R.id.TV_Fecha);
+        Date FActual = new Date();
+        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+        String FFormateada = sdf.format(FActual);
+        TV_Fecha.setText(FFormateada);
+
+        Avanzar = findViewById(R.id.B_Avanzar);
 
         Avanzar.setOnClickListener(new View.OnClickListener() {
             @Override
